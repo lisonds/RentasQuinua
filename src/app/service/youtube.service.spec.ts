@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CargarScriptsService } from './cargar-scripts.service';
+import { YoutubeService } from './youtube.service';
 
-describe('CargarScriptsService', () => {
-  let service: CargarScriptsService;
+describe('YoutubeService', () => {
+  let service: YoutubeService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(CargarScriptsService);
+    service = TestBed.inject(YoutubeService);
   });
 
   it('should be created', () => {

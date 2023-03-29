@@ -1,3 +1,137 @@
+/*=======Navigation======*/
+.navigation{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: var(--blue);
+    border-left: 10px solid var(--blue);
+    box-shadow: 10px 4px 15px 0 rgb(17, 17, 17) ;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+/*esto funciona con js*/
+.navigation.active{
+    width: 80px;
+}
+
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+}
+
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered{
+    background-color:var(--while);
+    box-shadow: 2px 4px 15px 0 rgb(17, 17, 17) ;
+}
+.navigation ul li:nth-child(1){
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--while);
+}
+.navigation ul li:hover a,
+.navigation ul li.hovered a{
+    color: var(--blue);
+
+
+}
+
+.navigation ul li a .icon{
+    position:relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.navigation ul li a .icon img{
+   max-width: 100%;
+   max-height: 100%;
+}
+.div_img{
+   
+    margin-bottom: 5px;
+    box-shadow: 2px 2px 15px 0 #000 ;
+    border-bottom:1px solid rgb(1, 27, 9);
+}
+
+.navigation ul li a .icon fa-icon{
+    font-size: 1.75rem;
+}
+
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+/*==========================agregadopormi============*/
+.navigation ul li a .titulo_Muni{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    margin-top: 15px;
+    height: 60px;
+    line-height: 20px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+/*=========Curba  pa arriba el seleccion lado derecho==========*/
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--while);
+    pointer-events: none;
+    
+
+}
+/*=========Curba  pa abajoel seleccion lado derecho==========*/
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--while);
+    pointer-events: none;
+
+}
 .main{
     position: absolute;
     width: calc(100% - 300px);/*para que funcione tienen que tener espacios en blanco en el signo + - * /*/

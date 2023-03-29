@@ -1,7 +1,9 @@
 import { Component, OnInit } from "@angular/core";
-import { faBars
+import {YoutubescriptService} from '../service/youtube.service';
+import { faBars,faCoffee, faPerson,faFile,faCircleQuestion,
+    faGear,faDroplet ,faMagnifyingGlass 
    } from '@fortawesome/free-solid-svg-icons'; 
-import { CargarScriptsService } from "../cargar-scripts.service";
+
 
 @Component({
     selector:'app-header',
@@ -11,9 +13,16 @@ import { CargarScriptsService } from "../cargar-scripts.service";
 })
 
 export class HeaderComponent {
-    constructor(private _cargaScripts:CargarScriptsService){
-        _cargaScripts.Carga(["main"]);
-    }
+    constructor(private youtubeservice: YoutubescriptService) {
+        this.youtubeservice.loadScript();
+      }
     faBars = faBars;
+    faCoffee = faCoffee;
+    faPerson=faPerson;
+    faFile=faFile;
+    faCircleQuestion=faCircleQuestion;
+    faGear=faGear;
+    faDroplet=faDroplet;
+    faMagnifyingGlass=faMagnifyingGlass;
     
 }
