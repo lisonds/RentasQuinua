@@ -1,0 +1,40 @@
+<!--============  Recivos buscador ==============-->
+<div class="contenedorBuscador">
+    <h2> Usuarios Registrados</h2>
+
+</div>
+<!--============  tabla ==============-->
+<div class="table_responsive">
+    <button type="button" class="btn btn-success" [routerLink]="['/persona/form']">Agregar Usuario</button>
+    <div class="contenedor-tabla">
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>DNI</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let person of personas">
+                    <td>{{person.idPersona}}</td>
+                    <td>{{person.nombre}}</td>
+                    <td>{{person.apellidos}}</td>
+                    <td>{{person.dni}}</td>
+                    <td>
+                        <span class="action_btn">
+
+                            <a href="infPersona" data-toggle="lightbox" data-title="Esto es titulo"
+                                data-footer="Esto es el futer del documento">
+                                informacion
+                            </a>
+                            <a href="#">Editar</a>
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

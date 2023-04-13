@@ -1,0 +1,28 @@
+<div class="contenedorRegistrar">
+    <div class="formTitle">
+        <p>Registrar Usuario</p>
+    </div>
+    <div class="form_content">
+        <form  (ngSubmit)= "create()" ><!--(ngSubmit)= "create()" -->
+            <div class="user_detalles">
+                <div class="ingresar_campo">
+                    <label for="name">Nombre</label>
+                    <input type="text" [(ngModel)]="persona.nombre" name="nommbre" placeholder="Ingrese su nombre" required>
+                </div>
+                <div class="ingresar_campo">
+                    <label for="Apellido">Apellido</label>
+                    <input type="text" [(ngModel)]="persona.apellidos" name="apellidos" placeholder="Ingrese su Apellido" required>
+                </div>
+                <div class="ingresar_campo">
+                    <label for="DNI">DNI</label>
+                    <input type="text" [(ngModel)]="persona.dni" name="dni" placeholder="Ingrese su DNI" required>
+                </div>
+               
+            </div>
+            <div class="form_buton">
+                <button role="button">Registrar</button>
+            </div>
+        </form>
+    </div>
+
+</div>

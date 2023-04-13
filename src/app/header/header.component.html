@@ -1,9 +1,9 @@
 <!--===================Menu de navegacion  https://fontawesome.com/icons/droplet?f=classic&s=solid=================-->
-<div class="container">
-    <div class="navigation">
+<div class="contenedor">
+    <div class="navegacion">
         <ul>
             <li>
-                <div class="div_img">
+                <div class="div_imagen">
                     <a href="#">
                         <span class="icon"> 
                             <!--<img src="img/logo.jpg" alt="">-->
@@ -17,7 +17,7 @@
             </li>
 
             <li>
-                <a href="#">
+                <a routerLink="/recibo">
                     <span class="icon"> 
                         <fa-icon [icon]="faFile"></fa-icon>
                         <!-- <ion-icon name="people-outline"></ion-icon> -->
@@ -27,7 +27,7 @@
             </li>
 
             <li>
-                <a href="#">
+                <a routerLink="/persona">
                     <span class="icon">
                       <!--  <ion-icon name="mail-outline"></ion-icon> --->
                       <fa-icon [icon]="faPerson"></fa-icon>
@@ -86,6 +86,9 @@
             <!--<img src="img/logo.jpg" alt="#">-->
         </div>
     </div>
-
+    <!--====para mostrar Contenidos de cada rutasse muestran a qui=====-->
+    <div class="main-cuerpo">
+    <router-outlet></router-outlet>
+    </div>
 
 </div>

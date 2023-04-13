@@ -1,0 +1,80 @@
+.contenedorRegistrar{
+    max-width: 900px;
+    padding: 15px;
+    overflow: auto;
+    margin: auto;
+    border-radius: 22px;
+    margin-top: 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 20px #0f5daa;
+    
+}
+.contenedorRegistrar .formTitle{
+    font-size: 26px;
+    font-weight: 600;
+    text-align: left;
+    color: #200370;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(16, 12, 240, 0.9);
+    position: relative;
+}
+.form_content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+
+.contenedorRegistrar form .user_detalles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+form .user_detalles .ingresar_campo {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+.user_detalles .ingresar_campo:nth-child(2n) {
+    justify-content: end;
+
+}
+
+.user_detalles .ingresar_campo label{
+    width: 95%;
+    color: #06011f;
+    font-weight: bold;
+    margin: 5px 0;
+}
+.ingresar_campo input{
+    height: 40px;
+    width: 95%;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #808083;
+    outline: none;
+}
+
+.ingresar_campo input:is(:focus,:valid){
+    box-shadow: 0 3px 6px rgb(30, 4, 180);
+}
+.form_buton{
+    margin: 15px 0;
+}
+
+.form_buton button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #110135,#3b08f3);
+}
+.form_buton button:hover{
+    background-image: linear-gradient(to right, #5410f3,#050408);
+}
